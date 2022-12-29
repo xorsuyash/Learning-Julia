@@ -1,0 +1,47 @@
+s="armstrong"
+println(s)
+s="JUlia string 
+    can span
+    several lines\n\n 
+    and they support the \"usual\" escapes like 
+    "
+println(s)
+
+a=repeat("tick ,",10)*"BOOM!"
+println(a)
+using PyCall 
+py"""
+    print("tick, "*10+"BOOM!")
+
+           """
+#python raw string 
+py"""
+    print("hi\nhello")
+    print(r"hi \n hello")"""
+#julia raw string 
+println("hi my name is :- \n suyash ")
+
+println(raw"hi my name is :- \n suyash")
+
+#unicode points of a string 
+a="caffe\u0301"
+for c in "caffe\u0301"
+    display(c)
+end 
+
+#string indexing 
+s="être"
+#println(s[2])
+#since second charcter takes two bytes in UTF-8 encoding so , r will be indexed at 4 
+
+# string slicing 
+for c in s
+    println(c)
+end 
+s[1:5]
+for i in eachindex(s)
+    println("$i : ",s[i])
+end 
+# find occurences 
+findfirst(isequal('t'),s)
+#findlast , findnext , findprev 
