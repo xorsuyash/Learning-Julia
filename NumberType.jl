@@ -17,3 +17,8 @@ function show(io::IO,r::MyRational)
     print(io,"$(r.num)⨸$(r.den)")
 end 
 2⨸3+5⨸4
+#conversion
+import Base.convert 
+MyRational(x::Int64)=MyRational(x,1)
+convert(::MyRational,x::Int64)=MyRational(x)
+convert(MyRational,41)
