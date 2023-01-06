@@ -1,3 +1,4 @@
+
 struct MyRational <: Real 
     num
     den 
@@ -22,3 +23,4 @@ import Base.convert
 MyRational(x::Int64)=MyRational(x,1)
 convert(::MyRational,x::Int64)=MyRational(x)
 convert(MyRational,41)
+
