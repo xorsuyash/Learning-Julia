@@ -27,3 +27,29 @@ for sym in [:foo, :bar, :barz]
 end 
 
 func_foo(2)
+
+
+#macros 
+
+#time macro 
+
+@time sleep(1)
+
+macro add(a,b,c)
+    println("after adding $(a+b+c)")
+end
+
+@add 1 2 3 
+
+
+
+#generated function in julia 
+
+@generated function foo(x)
+    Core.println(x)
+    return :(x*x)
+end 
+
+x=foo(2)
+
+y=foo("bar")
