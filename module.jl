@@ -5,5 +5,13 @@ b=rectangle(10,34)
 area_circle(a)
 area_rect(b)
 
+import .Suyash:double,triple 
+
+double("foo")
+
+
+
+
+
 
 
